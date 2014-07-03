@@ -63,7 +63,6 @@
     
     _parallaxBackground = [CCParallaxNode node];
     [_parallaxContainer addChild:_parallaxBackground];
-    [self addChild:_parallaxBackground z:0];
     
     _bushParallaxRatio = ccp(0.9, 1);
     _cloudParallaxRatio = ccp(0.5, 1);
@@ -79,7 +78,8 @@
         [self removeChild:cloud];
         [_parallaxBackground addChild:cloud z:0 parallaxRatio:_cloudParallaxRatio positionOffset:offset];
     }
-
+    
+    [self addChild:_parallaxBackground z:0];
     
     for (CCNode *ground in _grounds) {
         // set collision txpe
