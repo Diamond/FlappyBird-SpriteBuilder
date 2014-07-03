@@ -63,7 +63,7 @@
     
     _parallaxBackground = [CCParallaxNode node];
     [_parallaxContainer addChild:_parallaxBackground];
-    [self addChild:__parallaxBackground];
+    [self addChild:_parallaxBackground];
     
     _bushParallaxRatio = ccp(0.9, 1);
     _cloudParallaxRatio = ccp(0.5, 1);
